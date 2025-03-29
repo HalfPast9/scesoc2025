@@ -1,10 +1,51 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
+import { Menu, MenuItem, ProductItem, HoveredLink } from "@/components/ui/navbar-menu";
+import { useState } from "react";
 
 export default function Home() {
+  const [active, setActive] = useState<string | null>(null);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <Menu setActive={setActive}>
+
+        <MenuItem setActive={setActive} active={active} item="Products">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/products/web-dev">Web Development</HoveredLink>
+            <HoveredLink href="/products/interface-design">
+              Interface Design
+            </HoveredLink>
+            <HoveredLink href="/products/seo">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/products/branding">Branding</HoveredLink>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Resources">
+          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+            <ProductItem
+              title="Blog"
+              description="Read our latest blog posts"
+              href="/blog"
+              src="/blog-preview.jpg"
+            />
+            <ProductItem
+              title="Guides"
+              description="Start Learning from our guides"
+              href="/guides"
+              src="/guides-preview.jpg"
+            />
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="About">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/about/team">Our Team</HoveredLink>
+            <HoveredLink href="/about/company">Company</HoveredLink>
+            <HoveredLink href="/about/contact">Contact Us</HoveredLink>
+          </div>
+        </MenuItem>
+      </Menu>
+      
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -51,7 +92,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-      </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
