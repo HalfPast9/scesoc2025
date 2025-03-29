@@ -99,7 +99,7 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-      <Button>Click me</Button>
+      <Button>Click me 1</Button>
     </div>
   );
 }
