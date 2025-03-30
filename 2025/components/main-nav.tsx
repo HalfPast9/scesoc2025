@@ -8,8 +8,8 @@ export function MainNav({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
 
   return (
+    <header className="container mx-auto px-4" style={{ zIndex: 50, position: "relative" }}>
     <div className="flex justify-start items-center py-4 w-full">
-
     <Image
         src="/SCESoc_Logo_Yellow_White_Horizontal.png" 
         alt="SCESoc Logo"
@@ -63,6 +63,7 @@ export function MainNav({ className }: { className?: string }) {
         </MenuItem>
       </Menu>
     </div>
+  </header>
   )
 }
 

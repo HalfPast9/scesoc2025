@@ -1,8 +1,9 @@
 "use client"
 
 import { MainNav } from "@/components/main-nav"
-/* import { HeroSection } from "@/components/hero-section"
- */
+import { HeroCarousel } from "@/components/hero-carousel"
+
+
 export default function Home() {
   return (
     <div className="dark min-h-screen bg-background">
@@ -11,7 +12,7 @@ export default function Home() {
       </header>
 
       <main>
-        {/* <HeroSection /> */}
+        <HeroCarousel />
         {/* <UpcomingEvents /> */}
         {/* <AboutSection /> */}
         {/* <NewsletterSection /> */}
