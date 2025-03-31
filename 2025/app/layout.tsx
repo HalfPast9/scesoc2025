@@ -7,9 +7,9 @@ import { Navbar } from "@/components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Crypto Landing Page Template | Aceternity Template",
+  title: "SCESoc",
   description:
-    "Crypto landing is a simple one page landing page for startups and agencies. Built with Next.js, Tailwind CSS, TypeScript and framer motion.",
+    "Systems and Computer Engineering Society",
 };
 
 export default function RootLayout({
