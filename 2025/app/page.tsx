@@ -8,12 +8,7 @@ import { SimpleNavbarWithHoverEffects } from "@/components/SimpleNavbarWithHover
 export default function Home() {
   return (
     <div className="dark min-h-screen bg-background">
-      <header className="container mx-auto px-4">
-        <SimpleNavbarWithHoverEffects />
-      </header>
-
-      <main>
-      	<SimpleNavbarWithHoverEffects />
+      <main>	
       	<HeroSectionWithBeamsAndGrid />
         <HeroCarousel />
         {/* <UpcomingEvents /> */}
